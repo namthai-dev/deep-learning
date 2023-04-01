@@ -2,6 +2,7 @@
 import torch
 from torch import nn
 from d2l import torch as d2l
+import matplotlib.pyplot as plt
 
 class Data(d2l.DataModule):
     def __init__(self, num_train, num_val, num_inputs, batch_size):
@@ -57,3 +58,4 @@ model.board.yscale='log'
 trainer.fit(model, data)
 
 print('L2 norm of w:', float(l2_penalty(model.get_w_b()[0])))
+plt.show()

@@ -2,6 +2,7 @@ import numpy as np
 import torch
 from torch import nn
 from d2l import torch as d2l
+import matplotlib.pyplot as plt
 
 # Model
 class LinearRegression(d2l.Module):  #@save
@@ -41,3 +42,5 @@ w, b = model.get_w_b()
 
 print(f'error in estimating w: {data.w - w.reshape(data.w.shape)}')
 print(f'error in estimating b: {data.b - b}')
+
+plt.show()

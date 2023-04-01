@@ -1,6 +1,7 @@
 # %matplotlib inline
 import torch
 from d2l import torch as d2l
+import matplotlib.pyplot as plt
 
 # Defining the Model
 class LinearRegressionScratch(d2l.Module):  #@save
@@ -72,3 +73,5 @@ trainer.fit(model, data)
 
 print(f'error in estimating w: {data.w - model.w.reshape(data.w.shape)}')
 print(f'error in estimating b: {data.b - model.b}')
+
+plt.show()
